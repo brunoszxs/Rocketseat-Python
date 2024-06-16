@@ -63,6 +63,7 @@ def delete_task(id):
     for t in tasks:
         if t.id == id:
             found_task = t
+            break
 
     if found_task is None:
         return jsonify({"message": "Não foi possível deletar a atividade."}), 404
